@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
+  // darkMode: ["selector"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,7 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--funnelDisplay)", "sans-serif"],
+        // "var(--funnelDisplay)",
+        sans: ["sans-serif"],
       },
       colors: {
         background: "var(--background)",
@@ -57,6 +59,17 @@ export default {
       },
     },
   },
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [require("tailwindcss-animation-delay")],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+    require("tailwind-heropatterns")({
+      variants: [],
+      patterns: ["diagonal-stripes", "signal"],
+      colors: {
+        default: "#71717a",
+      },
+      opacity: {
+        default: "0.1",
+      },
+    }),
+  ],
 } satisfies Config;

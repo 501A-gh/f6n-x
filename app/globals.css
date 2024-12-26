@@ -7,21 +7,33 @@ body {
 }
 
 h1 {
-  @apply text-3xl font-medium pt-3 pb-1;
+  @apply text-xl font-medium text-black dark:text-white pt-3 pb-1;
 }
 h2 {
-  @apply text-2xl font-medium text-zinc-600 pt-3 pb-1;
+  @apply text-xl font-normal text-zinc-600 pt-3 pb-1;
 }
 h3 {
-  @apply text-xl font-medium text-zinc-600 pt-3 pb-1;
+  @apply text-lg font-medium text-zinc-600 pt-3 pb-1;
 }
 
 p {
   @apply text-base text-zinc-600 py-1;
 }
 
+hr {
+  @apply bg-zinc-200 dark:bg-zinc-800 border-none h-[1px];
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;
+  }
+
+  *::selection {
+    @apply bg-blue-500 text-white;
+  }
+
+  .w-600px {
+    width: 600px;
   }
 }

@@ -9,7 +9,7 @@ export default function Logo({ ...props }: SVGProps<SVGSVGElement>) {
       height={"1em"}
       viewBox="0 0 25 25"
       xmlns="http://www.w3.org/2000/svg"
-      // stroke="currentColor"
+      stroke="currentColor"
       strokeWidth={2}
       className={cn(props.className, "animate-blur-in")}
       {...props}
