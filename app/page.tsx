@@ -3,7 +3,7 @@ import Logo from "@/components/ui/logo";
 
 export default function Home() {
   return (
-    <main className="px-6 bg-white dark:bg-zinc-950">
+    <main className="px-6">
       <div className="mx-auto max-w-[600px] flex flex-col justify-center h-screen">
         <div className="text-8xl text-black dark:text-white">
           <Logo className="animate-blur-in" />

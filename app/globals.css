@@ -30,7 +30,7 @@ hr {
   }
 
   *::selection {
-    @apply bg-blue-500 text-white;
+    @apply bg-teal-700 text-white;
   }
 
   .w-600px {

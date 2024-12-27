@@ -11,7 +11,7 @@ export default async function ComposeFx() {
   const { title, description } = data;
 
   return (
-    <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 px-6">
+    <main className="min-h-screen px-6">
       <div className="mx-auto max-w-[600px] flex flex-col justify-center">
         <hgroup className="py-12">
           <h1>{title}</h1>

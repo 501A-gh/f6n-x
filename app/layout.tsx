@@ -25,9 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${funnelDisplay.variable} antialiased bg-zinc-950`}>
+      <body
+        className={`${funnelDisplay.variable} antialiased bg-zinc-50 dark:bg-zinc-950`}
+      >
         {children}
-        <footer className="px-6">
+        <footer className="px-6 bg-zinc-900 rounded-t-2xl border-t border-zinc-800">
           <div className="mx-auto max-w-[600px] flex flex-col justify-center items-center h-fit *:text-white py-16">
             <h3>f6n</h3>
             <p>Design & engineered by 501A</p>
