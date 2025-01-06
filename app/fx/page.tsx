@@ -1,24 +1,22 @@
 import React from "react";
-import ComposeSteps from "./compose-steps";
+import ComposeSteps from "./compose";
+import Header from "@/components/ui/layout/header";
 
 export default async function ComposeFx() {
-  const data = {
-    title: "My Equation",
-    description: "This is a page for my equation",
-    latex: "\frac{1}{2}",
-  };
+  // const data = {
+  //   title: "My Equation",
+  //   description: "This is a page for my equation",
+  //   latex: "\frac{1}{2}",
+  // };
 
-  const { title, description } = data;
+  // const { title, description } = data;
 
   return (
-    <main className="min-h-screen px-6">
-      <div className="mx-auto max-w-[600px] flex flex-col justify-center">
-        <hgroup className="py-12">
-          <h1>{title}</h1>
-          <p>{description}</p>
-        </hgroup>
+    <main className="min-h-screen flex flex-col">
+      <Header />
+      <section className="p-6 flex items-center flex-col w-full h-full flex-1">
         <ComposeSteps />
-      </div>
+      </section>
     </main>
   );
 }

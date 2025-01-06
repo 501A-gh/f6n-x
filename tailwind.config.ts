@@ -12,7 +12,16 @@ export default {
     extend: {
       fontFamily: {
         // "var(--funnelDisplay)",
-        sans: ["sans-serif"],
+        sans: ["var(--instrumentSans)", "sans-serif"],
+      },
+      maxWidth: {
+        104: "26rem",
+        112: "28rem",
+        120: "30rem",
+        128: "32rem",
+        136: "34rem",
+        144: "36rem",
+        152: "38rem",
       },
       colors: {
         background: "var(--background)",
@@ -59,17 +68,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animation-delay"),
-    require("tailwind-heropatterns")({
-      variants: [],
-      patterns: ["diagonal-stripes", "signal"],
-      colors: {
-        default: "#71717a",
-      },
-      opacity: {
-        default: "0.1",
-      },
-    }),
-  ],
+  plugins: [require("tailwindcss-animation-delay")],
 } satisfies Config;

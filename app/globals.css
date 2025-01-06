@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-  @apply text-xl font-medium text-black dark:text-white pt-3 pb-1;
+  @apply text-2xl font-medium text-black dark:text-white pt-3 pb-1;
 }
 h2 {
   @apply text-xl font-normal text-zinc-600 pt-3 pb-1;
@@ -17,11 +17,15 @@ h3 {
 }
 
 p {
-  @apply text-base text-zinc-600 py-1;
+  @apply text-base text-zinc-600 dark:text-zinc-500 py-1;
 }
 
 hr {
   @apply bg-zinc-200 dark:bg-zinc-800 border-none h-[1px];
+}
+
+b {
+  @apply font-medium;
 }
 
 @layer base {
@@ -30,10 +34,12 @@ hr {
   }
 
   *::selection {
-    @apply bg-teal-700 text-white;
+    @apply bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300;
   }
+}
 
-  .w-600px {
-    width: 600px;
+@layer components {
+  .wm-auto {
+    @apply mx-auto max-w-[880px] w-full;
   }
 }

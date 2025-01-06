@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const funnelDisplay = localFont({
-  src: "./fonts/FunnelDisplayVariable.ttf",
-  variable: "--funnelDisplay",
+const instrumentSans = localFont({
+  src: "./fonts/InstrumentSansVariable.ttf",
+  variable: "--instrumentSans",
   weight: "400 500 600 700",
 });
 // const geistMono = localFont({
@@ -14,7 +14,7 @@ const funnelDisplay = localFont({
 // });
 
 export const metadata: Metadata = {
-  title: "f6n",
+  title: "Hence",
   description: "The Everything Calculator",
 };
 
@@ -26,13 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${funnelDisplay.variable} antialiased bg-zinc-50 dark:bg-zinc-950`}
+        className={`${instrumentSans.variable} antialiased bg-zinc-50 dark:bg-zinc-950`}
       >
         {children}
-        <footer className="px-6 bg-zinc-900 rounded-t-2xl border-t border-zinc-800">
-          <div className="mx-auto max-w-[600px] flex flex-col justify-center items-center h-fit *:text-white py-16">
-            <h3>f6n</h3>
-            <p>Design & engineered by 501A</p>
+        <hr />
+        <footer className="px-6 bg-white dark:bg-zinc-900/50">
+          <div className="wm-auto flex flex-col h-fit py-12">
+            <p>Design + Engineered by 501A</p>
+            <p>Copywriting by Y.N.</p>
           </div>
         </footer>
       </body>
