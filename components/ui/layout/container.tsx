@@ -2,12 +2,12 @@ import { cn } from "@/lib/utils";
 import React, { ReactNode } from "react";
 
 export default function Container({
-  hide,
+  className,
   title,
   dscrp,
   children,
 }: {
-  hide?: boolean;
+  className?: string;
   title: string;
   dscrp: string;
   children: ReactNode;
@@ -15,8 +15,8 @@ export default function Container({
   return (
     <section
       className={cn(
-        "grid gap-12 h-fit mx-auto w-full max-w-144 pt-6 sm:pt-12",
-        hide ? "hidden" : "*:opacity-0 *:animate-blur-in"
+        "flex flex-col gap-12 h-full mx-auto w-full max-w-144 pt-6 sm:pt-12 *:opacity-0 *:animate-blur-in",
+        className
       )}
     >
       <hgroup className="sm:text-center animation-delay-75">

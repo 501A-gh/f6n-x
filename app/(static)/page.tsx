@@ -23,7 +23,7 @@ export default function Home() {
           </hgroup>
           <form className="mx-auto">
             <fieldset className="flex items-center gap-2">
-              <Link href="/fx">
+              <Link href="/create/fx">
                 <Button
                   type="button"
                   className="transition-transform active:scale-95"

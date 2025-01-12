@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import ExtractVars from "./extract-vars";
+import ComposeLatex from "./compose-latex";
 import Container from "@/components/ui/layout/container";
-import LabelVars from "./label-vars";
 
-export default function Compose() {
+export default function ComposeFx() {
   const [latexInput, setLatexInput] = useState<{
     latex: string;
     variables: string[];
@@ -13,22 +13,25 @@ export default function Compose() {
     variables: [],
   });
 
-  return (
-    <>
+  const extracted = latexInput.variables.length > 0 ? true : false;
+
+  if (!extracted) {
+    return (
       <Container
         title="Create Equation"
         dscrp="Start by typing your LaTeX equation in the input field."
-        hide={latexInput.variables.length ? true : false}
       >
         <ExtractVars latexInput={latexInput} setLatexInput={setLatexInput} />
       </Container>
-      <Container
-        title="Label Variables"
-        dscrp="Labeling will help you remember what each variable stands for."
-        hide={latexInput.variables.length ? false : true}
-      >
-        <LabelVars latexInput={latexInput} setLatexInput={setLatexInput} />
-      </Container>
-    </>
+    );
+  }
+
+  return (
+    <Container
+      title="Label Variables"
+      dscrp="Labeling will help you remember what each variable stands for."
+    >
+      <ComposeLatex latexInput={latexInput} setLatexInput={setLatexInput} />
+    </Container>
   );
 }

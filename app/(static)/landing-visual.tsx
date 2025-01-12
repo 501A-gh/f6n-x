@@ -4,7 +4,7 @@ import {
 } from "@/components/ui/connector";
 import { Input } from "@/components/ui/input";
 import React from "react";
-import LatexPreview from "../fx/[id]/latex-preview";
+import LatexPreview from "../calculate/[id]/latex-preview";
 import { Button } from "@/components/ui/button";
 
 export default function LandingVisual() {
@@ -44,7 +44,9 @@ export default function LandingVisual() {
         <div className="flex items-center justify-center gap-2 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 text-black dark:text-white shadow-md rounded-lg w-32 h-fit px-2 py-1 text-sm absolute transform translate-x-1/2 -translate-y-7">
           LaTeX Equation
         </div>
-        <LatexPreview latex="T_C\times\frac{9}{5}+32" />
+        <div className="pb-4 pt-6">
+          <LatexPreview latex="T_C\times\frac{9}{5}+32" />
+        </div>
         <Button
           type="button"
           variant={"secondary"}

@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1736633630050,
+      "tag": "0000_quick_sleeper",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1736634522825,
+      "tag": "0001_curved_xorn",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1736651913540,
+      "tag": "0002_keen_miss_america",
+      "breakpoints": true
+    }
+  ]
+}

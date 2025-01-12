@@ -23,7 +23,6 @@ export default function ExtractVars({
   >;
 }) {
   const previewRef = useRef<HTMLDivElement>(null);
-
   const [latexError, setLatexError] = useState(false);
 
   useEffect(() => {
@@ -77,6 +76,7 @@ export default function ExtractVars({
 
       if (!response.ok) throw new Error("Failed to extract variables");
       const data = await response.json();
+
       setLatexInput({
         ...latexInput,
         variables: data.variables,
@@ -122,7 +122,7 @@ export default function ExtractVars({
       <hr />
       <div
         className={cn(
-          "overflow-x-auto min-h-28 flex-1 rounded-t-md flex items-center justify-center",
+          "overflow-x-auto min-h-28 flex-1 flex items-center justify-center bg-zinc-50 dark:bg-zinc-950",
           latexError
             ? "text-rose-600 dark:text-rose-500"
             : "text-black dark:text-white"
@@ -151,6 +151,7 @@ export default function ExtractVars({
         </div>
         <Button
           type="submit"
+          variant="secondary"
           disabled={latexError || !latexInput.latex || isPending}
         >
           {isPending ? (

@@ -30,7 +30,7 @@ export default function LatexPreview({
 
   return (
     <section>
-      <div className="text-black dark:text-white overflow-x-auto h-28 flex items-center justify-center">
+      <div className="text-black dark:text-white overflow-x-auto h-24 flex items-center justify-center">
         <div className="h-fit" ref={previewRef} />
       </div>
       {!hideLatexCode && (
