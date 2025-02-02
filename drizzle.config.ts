@@ -5,7 +5,7 @@ import { loadEnvConfig } from "@next/env";
 loadEnvConfig(cwd());
 
 export default {
-  schema: "./db/schema.ts",
+  schema: "./server/db/schema.ts",
   out: "./migrations",
   dialect: "turso",
   dbCredentials: {

@@ -103,8 +103,12 @@ const ShisaFolder = ({ ...props }: SVGProps<SVGSVGElement>) => (
 
 const ShisaHence = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <Shisa {...props}>
-    <path
+    {/* <path
       d="M9 10L15 10M9 14L15 14M7 4.5C7 4.5 3 7 3 12C3 17 7 19.5 7 19.5M17 4.5C17 4.5 21 7 21 12C21 17 17 19.5 17 19.5"
+      stroke="currentColor"
+    /> */}
+    <path
+      d="M8.5 9.5H15.5M8.5 14.5H15.5M6.44444 4C6.44444 4 2 6.66667 2 12C2 17.3333 6.44444 20 6.44444 20M17.5556 4C17.5556 4 22 6.66667 22 12C22 17.3333 17.5556 20 17.5556 20"
       stroke="currentColor"
     />
   </Shisa>
@@ -192,6 +196,66 @@ const ShisaChevronDown = ({ ...props }: SVGProps<SVGSVGElement>) => (
   </Shisa>
 );
 
+const ShisaChevronRight = ({ ...props }: SVGProps<SVGSVGElement>) => (
+  <Shisa {...props}>
+    <path
+      d="M9 5L13.8844 10.6984C14.5263 11.4474 14.5263 12.5526 13.8844 13.3016L9 19"
+      stroke="currentColor"
+    />
+  </Shisa>
+);
+
+const ShisaSettings = ({ ...props }: SVGProps<SVGSVGElement>) => (
+  <Shisa {...props}>
+    <path
+      d="M3.07178 13.5839L2.72066 14.5202L3.07178 13.5839L2.51307 13.3744C1.24312 12.8982 1.24312 11.1018 2.51307 10.6256L3.07178 10.4161C4.91057 9.72654 5.60478 7.48752 4.47859 5.87869C3.83369 4.95739 4.95739 3.83369 5.87869 4.47859C7.48752 5.60478 9.72654 4.91057 10.4161 3.07178L9.47975 2.72066L10.4161 3.07178L10.6256 2.51307C11.1018 1.24312 12.8982 1.24312 13.3744 2.51307L13.5839 3.07178C14.2735 4.91057 16.5125 5.60478 18.1213 4.47859C19.0426 3.83369 20.1663 4.95739 19.5214 5.87869C18.3952 7.48752 19.0894 9.72654 20.9282 10.4161L21.4869 10.6256C22.7569 11.1018 22.7569 12.8982 21.4869 13.3744L20.9282 13.5839C19.0894 14.2735 18.3952 16.5125 19.5214 18.1213C20.1663 19.0426 19.0426 20.1663 18.1213 19.5214C16.5125 18.3952 14.2735 19.0894 13.5839 20.9282L13.3744 21.4869C12.8982 22.7569 11.1018 22.7569 10.6256 21.4869L10.4161 20.9282C9.72654 19.0894 7.48752 18.3952 5.87869 19.5214C4.95739 20.1663 3.83369 19.0426 4.47859 18.1213C5.60478 16.5125 4.91057 14.2735 3.07178 13.5839Z"
+      stroke="currentColor"
+    />
+    <circle cx="12" cy="12" r="3" stroke="currentColor" />
+  </Shisa>
+);
+
+const ShisaPlus = ({ ...props }: SVGProps<SVGSVGElement>) => (
+  <Shisa {...props}>
+    <path d="M6 11.9199H18" stroke="currentColor" />
+    <path d="M12 6V18" stroke="currentColor" />
+  </Shisa>
+);
+
+const ShisaEdit = ({ ...props }: SVGProps<SVGSVGElement>) => (
+  <Shisa {...props}>
+    <path
+      d="M10.8347 16.6212C10.5555 16.9004 10.1999 17.0907 9.8127 17.1681L6.57406 17.8158C5.87434 17.9558 5.25742 17.3389 5.39736 16.6391L6.04509 13.4005C6.12253 13.0133 6.31284 12.6577 6.59204 12.3785L15.1421 3.82842C15.9232 3.04737 17.1895 3.04737 17.9706 3.82842L19.3848 5.24263C20.1658 6.02368 20.1658 7.29001 19.3848 8.07106L10.8347 16.6212Z"
+      stroke="currentColor"
+    />
+    <path d="M3 21H21" stroke="currentColor" />
+    <path d="M13 6L17 10" stroke="currentColor" />
+  </Shisa>
+);
+
+const ShisaBookmark = ({ ...props }: SVGProps<SVGSVGElement>) => (
+  <Shisa {...props}>
+    <path
+      d="M7 3H17C18.1046 3 19 3.89543 19 5V19.8433C19 20.7563 17.8771 21.1918 17.2615 20.5176L13.1077 15.9682C12.5129 15.3168 11.4871 15.3168 10.8923 15.9682L6.73849 20.5176C6.12289 21.1918 5 20.7563 5 19.8433V5C5 3.89543 5.89543 3 7 3Z"
+      stroke="currentColor"
+    />
+  </Shisa>
+);
+
+const ShisaHome = ({ ...props }: SVGProps<SVGSVGElement>) => (
+  <Shisa {...props}>
+    <path
+      d="M4 7V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7"
+      stroke="currentColor"
+    />
+    <path
+      d="M23 9L13.0738 2.6833C12.4186 2.26639 11.5814 2.26639 10.9262 2.6833L6.5 5.5L1 9"
+      stroke="currentColor"
+    />
+    <circle cx="12" cy="14" r="3" stroke="currentColor" />
+  </Shisa>
+);
+
 export {
   ShisaCreateEquation,
   ShisaUndo,
@@ -209,4 +273,10 @@ export {
   ShisaHistory,
   ShisaSmartphone,
   ShisaChevronDown,
+  ShisaChevronRight,
+  ShisaSettings,
+  ShisaPlus,
+  ShisaEdit,
+  ShisaBookmark,
+  ShisaHome,
 };

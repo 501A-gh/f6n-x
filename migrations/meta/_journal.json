@@ -22,6 +22,48 @@
       "when": 1736651913540,
       "tag": "0002_keen_miss_america",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1736805851758,
+      "tag": "0003_sudden_magneto",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1736807389562,
+      "tag": "0004_clear_shape",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1737053261917,
+      "tag": "0005_needy_cobalt_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1737264923813,
+      "tag": "0006_pink_living_tribunal",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1737265061722,
+      "tag": "0007_luxuriant_starjammers",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1737281230566,
+      "tag": "0008_outgoing_jack_murdock",
+      "breakpoints": true
     }
   ]
 }

@@ -1,10 +1,11 @@
 "use client";
+import CenterFlow from "@/components/ui/layout/center-flow";
+import Container from "@/components/ui/layout/container";
 import React, { useState } from "react";
 import ExtractVars from "./extract-vars";
-import ComposeLatex from "./compose-latex";
-import Container from "@/components/ui/layout/container";
+import LabelVars from "./label-vars";
 
-export default function ComposeFx() {
+export default function ComposeFlow({ userId }: { userId: string }) {
   const [latexInput, setLatexInput] = useState<{
     latex: string;
     variables: string[];
@@ -17,21 +18,29 @@ export default function ComposeFx() {
 
   if (!extracted) {
     return (
-      <Container
+      <CenterFlow
         title="Create Equation"
         dscrp="Start by typing your LaTeX equation in the input field."
       >
-        <ExtractVars latexInput={latexInput} setLatexInput={setLatexInput} />
-      </Container>
+        <Container>
+          <ExtractVars latexInput={latexInput} setLatexInput={setLatexInput} />
+        </Container>
+      </CenterFlow>
     );
   }
 
   return (
-    <Container
+    <CenterFlow
       title="Label Variables"
       dscrp="Labeling will help you remember what each variable stands for."
     >
-      <ComposeLatex latexInput={latexInput} setLatexInput={setLatexInput} />
-    </Container>
+      <Container>
+        <LabelVars
+          userId={userId}
+          latexInput={latexInput}
+          setLatexInput={setLatexInput}
+        />
+      </Container>
+    </CenterFlow>
   );
 }

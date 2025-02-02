@@ -6,6 +6,7 @@ import React, { useActionState, useEffect, useRef, useState } from "react";
 import katex from "katex";
 import "katex/dist/katex.min.css";
 import { Button } from "@/components/ui/button";
+import { extractVars } from "./action";
 
 export default function ExtractVars({
   latexInput,
@@ -55,51 +56,20 @@ export default function ExtractVars({
       variables: string[];
     },
     FormData
-  >(
-    async (prev, formData) => {
-      if (!formData) return prev;
-      const latexInput = {
-        latex: String(formData.get("latex-input")),
-        exclude_constants: Boolean(formData.get("exclude-constants")),
-        variables: [],
-      };
-      const response = await fetch(`http://localhost:3000/api/extract-vars`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          latex: latexInput.latex,
-          exclude_constants: latexInput.exclude_constants,
-        }),
-      });
-
-      if (!response.ok) throw new Error("Failed to extract variables");
-      const data = await response.json();
-
-      setLatexInput({
-        ...latexInput,
-        variables: data.variables,
-      });
-      return {
-        ...prev,
-        extract: {
-          latex: latexInput.latex,
-          exclude_constants: latexInput.exclude_constants,
-        },
-        variables: data.variables,
-      };
+  >(extractVars, {
+    extract: {
+      latex: "",
+      exclude_constants: true,
     },
-    {
-      extract: {
-        latex: "",
-        exclude_constants: true,
-      },
-      variables: [],
-    }
-  );
+    variables: [],
+  });
 
-  console.log(extractState);
+  useEffect(() => {
+    setLatexInput({
+      ...latexInput,
+      variables: extractState.variables,
+    });
+  }, [extractState]);
 
   return (
     <form
@@ -109,7 +79,7 @@ export default function ExtractVars({
       <input
         type="text"
         name="latex-input"
-        className="w-full h-8 text-sm rounded-full font-mono bg-transparent focus:ring-0 focus:outline-none py-7 px-5"
+        className="w-full h-8 text-sm font-mono bg-transparent focus:ring-0 focus:outline-none py-7 px-5 rounded-t-2xl"
         value={latexInput.latex}
         onChange={(e) => {
           setLatexInput({
