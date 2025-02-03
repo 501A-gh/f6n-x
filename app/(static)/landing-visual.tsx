@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export default function LandingVisual() {
   return (
-    <div className="lg:h-96 flex flex-col lg:flex-row items-center justify-center bg-zinc-100 dark:bg-zinc-900/30 border border-zinc-200 dark:border-zinc-800 shadow-sm rounded-2xl overflow-clip p-6">
+    <div className="lg:h-96 flex flex-col lg:flex-row items-center justify-center bg-zinc-100 dark:bg-zinc-900/30 border border-zinc-200 dark:border-zinc-800/70 shadow-sm rounded-2xl overflow-clip p-6">
       <div className="border border-zinc-200 dark:border-zinc-800 shadow-sm rounded-2xl overflow-clip w-56">
         <hgroup className="bg-white dark:bg-zinc-900 p-4">
           <h4 className="text-black dark:text-white font-medium">

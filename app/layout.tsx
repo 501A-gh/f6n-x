@@ -4,6 +4,7 @@ import "./globals.css";
 import { ConnectorHorizontal } from "@/components/ui/connector";
 import Header from "@/components/ui/layout/header";
 import BreadcrumbsParent from "@/components/ui/layout/breadcrumbs-parent";
+import Link from "next/link";
 
 const instrumentSans = localFont({
   src: "./fonts/InstrumentSansVariable.ttf",
@@ -36,11 +37,13 @@ export default function RootLayout({
           <BreadcrumbsParent />
           <section className="flex-1 flex flex-col">{children}</section>
         </main>
-        <hr />
-        <footer className="bg-white dark:bg-zinc-900/50">
+        <footer className="bg-white dark:bg-zinc-900/50 border-t border-zinc-200 dark:border-zinc-800/70">
           <div className="px-6">
             <div className="wm-auto flex flex-col h-fit py-12">
-              <p>Design + Engineered by 501A</p>
+              <p>
+                Design + Engineered by{" "}
+                <Link href="https://501A.vercel.app">501A</Link>
+              </p>
               <p>Copywriting by Y.N.</p>
             </div>
           </div>

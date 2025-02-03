@@ -121,7 +121,6 @@ export default function ExtractVars({
         </div>
         <Button
           type="submit"
-          variant="secondary"
           disabled={latexError || !latexInput.latex || isPending}
         >
           {isPending ? (

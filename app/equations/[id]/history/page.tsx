@@ -4,12 +4,35 @@ import { db } from "@/server/db";
 import { equations, variables } from "@/server/db/schema";
 import { eq } from "drizzle-orm";
 import LatexPreview from "@/components/ui/latex-preview";
+import { auth } from "@/server/auth";
+import Container from "@/components/ui/layout/container";
+import Link from "next/link";
+import { ShisaArrowRight } from "@/components/icons/Shisa";
+import SignInToView from "../signin-to-view";
 
 export default async function VariablesPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
+  const session = await auth();
+  if (!session || !session.user)
+    return (
+      <SignInToView
+        title="History unavailable"
+        description="Sign in to view the history of this equation."
+      >
+        <div className="grid gap-3 *:border *:border-zinc-200 *:dark:border-zinc-900 *:bg-zinc-100 *:dark:bg-zinc-900/50 *:w-full *:h-full *:rounded-lg *:blur-sm">
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
+      </SignInToView>
+    );
   const [equationData] = await db
     .select()
     .from(equations)

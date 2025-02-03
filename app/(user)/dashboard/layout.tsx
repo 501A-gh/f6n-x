@@ -1,9 +1,8 @@
-// import { ShisaGlobe, ShisaHome } from "@/components/icons/Shisa";
 import {
   ShisaBookmark,
   ShisaDocument,
   ShisaFolder,
-  ShisaHome,
+  ShisaHistory,
 } from "@/components/icons/Shisa";
 import SlidingTabs from "@/components/ui/sliding-tabs";
 
@@ -14,13 +13,13 @@ export default async function DashboardLayout({
 }) {
   return (
     <div className="flex flex-col">
-      <nav className="sticky top-0 py-3 z-20 h-fit bg-zinc-50/80 dark:dark:bg-zinc-950/80 backdrop-blur border-b border-zinc-200/60 dark:border-zinc-800/60">
-        <div className="wm-auto flex items-center">
+      <nav className="sticky top-0 z-20 px-6 py-2.5 bg-zinc-50/80 dark:dark:bg-zinc-950/80 backdrop-blur border-b border-zinc-200 dark:border-zinc-800/70">
+        <div className="wm-auto flex items-center justify-center">
           <SlidingTabs
             basePath="/dashboard"
             tabs={[
               {
-                icon: <ShisaHome />,
+                icon: <ShisaHistory />,
                 title: "Recent",
                 path: "",
               },

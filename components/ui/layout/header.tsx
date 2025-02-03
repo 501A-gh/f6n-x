@@ -18,8 +18,10 @@ export default async function Header() {
   return (
     <header
       className={cn(
-        "flex justify-between items-center h-14 top-0 bg-zinc-50/90 dark:bg-zinc-950/90 backdrop-blur z-50 px-6 border-b border-zinc-200 dark:border-zinc-800",
-        !session && "sticky"
+        "flex justify-between bg-zinc-50/90 dark:bg-zinc-950/90 backdrop-blur z-50 px-6",
+        session
+          ? "items-end h-12 pb-1.5"
+          : "items-center sticky top-0 border-b border-zinc-200 dark:border-zinc-800/70 h-14"
       )}
     >
       <div className="flex items-center justify-between w-full wm-auto">

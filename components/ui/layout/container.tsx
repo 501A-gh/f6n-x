@@ -11,7 +11,7 @@ export default function Container({
   return (
     <div
       className={cn(
-        "grid bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm rounded-2xl w-full h-fit text-black dark:text-white",
+        "grid bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/70 shadow-sm rounded-2xl w-full h-fit text-black dark:text-white",
         props.className
       )}
     >

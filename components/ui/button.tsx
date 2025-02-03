@@ -11,7 +11,7 @@ const buttonVariants = cva(
         default:
           "text-white dark:text-black bg-zinc-800 dark:bg-zinc-200 border-b-2 border-zinc-950 dark:border-zinc-50 rounded-full shadow-sm",
         secondary:
-          "text-black dark:text-white bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-full shadow-sm",
+          "text-black dark:text-white bg-white dark:bg-zinc-800/70 border border-zinc-200 dark:border-zinc-800 rounded-full shadow-sm",
         danger:
           "bg-rose-600 dark:bg-rose-800 text-zinc-100 border border-rose-600 dark:border-rose-700 rounded-full shadow-sm 5",
         ghost:

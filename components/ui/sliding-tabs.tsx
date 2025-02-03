@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const borderRadius = "0.5rem";
+const borderRadius = "20rem";
 
 type Tab = {
   icon?: React.ReactNode;
@@ -70,10 +70,10 @@ const SlidingTabs = ({
           >
             <div
               className={cn(
-                "transition-transform active:scale-95 flex items-center w-full h-full py-2 px-4",
+                "transition-transform active:scale-95 flex items-center w-full h-full py-2",
                 orientation === "horizontal"
-                  ? "gap-2 justify-center"
-                  : "gap-2.5 justify-start"
+                  ? "gap-2 justify-center px-3"
+                  : "gap-2.5 justify-start px-4 active:-translate-x-1"
               )}
             >
               {icon}
@@ -113,8 +113,8 @@ const SlidingTabs = ({
                 ? "text-black dark:text-white"
                 : "text-transparent",
               orientation === "horizontal"
-                ? "gap-2 flex-1 justify-center"
-                : "gap-2.5 px-4"
+                ? "gap-2 flex-1 justify-center px-3"
+                : "gap-2.5 justify-start px-4"
             )}
           >
             {icon}
