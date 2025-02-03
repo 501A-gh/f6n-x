@@ -10,10 +10,10 @@ h1 {
   @apply text-2xl font-medium text-black dark:text-white pt-3 pb-1;
 }
 h2 {
-  @apply text-xl font-normal text-zinc-600 pt-3 pb-1;
+  @apply text-xl font-normal text-zinc-600 dark:text-zinc-300 pt-3 pb-1;
 }
 h3 {
-  @apply text-lg font-medium text-zinc-600 pt-3 pb-1;
+  @apply text-lg font-medium text-zinc-600 dark:text-zinc-300 pt-3 pb-1;
 }
 
 p {

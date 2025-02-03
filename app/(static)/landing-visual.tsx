@@ -4,7 +4,7 @@ import {
 } from "@/components/ui/connector";
 import { Input } from "@/components/ui/input";
 import React from "react";
-import LatexPreview from "../calculate/[id]/latex-preview";
+import LatexPreview from "../../components/ui/latex-preview";
 import { Button } from "@/components/ui/button";
 
 export default function LandingVisual() {

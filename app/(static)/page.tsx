@@ -11,8 +11,11 @@ import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/logo";
 import Link from "next/link";
 import LandingVisual from "./landing-visual";
+import { auth } from "@/server/auth";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+
   return (
     <section className="px-6">
       <div className="wm-auto flex flex-col gap-24">
@@ -23,7 +26,7 @@ export default function Home() {
           </hgroup>
           <form className="mx-auto">
             <fieldset className="flex items-center gap-2">
-              <Link href="/create/fx">
+              <Link href={session ? "/create" : "/auth"}>
                 <Button
                   type="button"
                   className="transition-transform active:scale-95"
