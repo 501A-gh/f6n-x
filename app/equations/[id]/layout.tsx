@@ -55,7 +55,7 @@ export default async function CalculatorLayout({
           <nav>
             {/* className="grid gap-1.5 *:px-3 *:py-2 *:text-md text-zinc-700 dark:text-zinc-300 *:rounded-lg *:flex *:items-center *:gap-2 *:border *:border-transparent" */}
             <SlidingTabs
-              currentPath={`/equations/${slug}`}
+              basePath={`/equations/${slug}`}
               tabs={[
                 {
                   icon: <ShisaHence />,
